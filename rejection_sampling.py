@@ -26,6 +26,8 @@ def driver():
     write_list(samples_drawn, './outputs/samples.txt')
     probs, bins = get_histogram_data(samples_drawn, N_SAMPLE + 1)
     plt.plot(bins, probs, alpha=0.5, linewidth=0.4)
+    plt.xlabel('X')
+    plt.ylabel('Probability')
     plt.savefig('./outputs/sin_hist.png')
     plt.show()
 
